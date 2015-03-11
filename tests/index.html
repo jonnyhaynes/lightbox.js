@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lightbox.js</title>
+
+  <script src="../dist/lightbox.min.js"></script>
+  <script>
+    /**
+     * A vanilla JS alternative to $(document).ready();
+     */
+
+    var ready = function (fn) {
+      if (document.readyState != 'loading'){
+        fn();
+      } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', fn);
+      } else {
+        document.attachEvent('onreadystatechange', function() {
+          if (document.readyState != 'loading')
+            fn();
+        });
+      }
+    };
+
+    ready(function() {
+      Lightbox.init();
+    });
+  </script>
+
+</head>
+<body>
+
+  <a href="#" rel="lightbox">Show lightbox</a>
+
+</body>
+</html>

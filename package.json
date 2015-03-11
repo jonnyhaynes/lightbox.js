@@ -1,0 +1,24 @@
+{
+  "name": "lightbox.js",
+  "description": "A vanilla JavaScript lightbox.",
+  "author": "Oliver Farrell",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oliverfarrell/lightbox.js"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=2.1.5"
+  },
+  "dependencies": {
+    "autoprefixer": "^5.1.0",
+    "jshint": "^2.6.0",
+    "node-sass": "^1.2.3",
+    "uglify-js": "^2.4.16"
+  },
+  "scripts": {
+    "js": "jshint src/*.js | uglifyjs src/*.js -o dist/lightbox.min.js --source-map dist/lightbox.min.js.map --source-map-url ../dist/lightbox.min.js.map"
+  }
+}

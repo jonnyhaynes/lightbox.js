@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'js' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose run-script [ 'prejs', 'js', 'postjs' ]
+5 info prejs lightbox.js@1.0.0
+6 info js lightbox.js@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info lightbox.js@1.0.0 Failed to exec js script
+9 error lightbox.js@1.0.0 js: `jshint src/*.js | uglifyjs src/*.js -o dist/lightbox.min.js --source-map dist/lightbox.min.js.map --source-map-url ../dist/lightbox.min.js.map`
+9 error Exit status 8
+10 error Failed at the lightbox.js@1.0.0 js script.
+10 error This is most likely a problem with the lightbox.js package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     jshint src/*.js | uglifyjs src/*.js -o dist/lightbox.min.js --source-map dist/lightbox.min.js.map --source-map-url ../dist/lightbox.min.js.map
+10 error You can get their info via:
+10 error     npm owner ls lightbox.js
+10 error There is likely additional logging output above.
+11 error System Darwin 14.1.0
+12 error command "node" "/usr/local/bin/npm" "run" "js"
+13 error cwd /Users/oliverfarrell/Sites/lightbox.js
+14 error node -v v0.10.33
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
