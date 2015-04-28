@@ -46,7 +46,7 @@ var Lightbox = (function () {
    * Build lightbox
    */
 
-  var _buildLightbox = function () {
+  var _buildLightbox = function (e) {
 
     // grab the contents of the template and insert it into the DOM
     _getFileContents(config.template, function (response) {
@@ -85,8 +85,7 @@ var Lightbox = (function () {
 
     });
 
-    return false;
-
+    e.returnValue = false;
   };
 
 
@@ -94,7 +93,7 @@ var Lightbox = (function () {
    * Destroy lightbox
    */
 
-  var _destroyLightbox = function () {
+  var _destroyLightbox = function (e) {
     var lightbox = document.querySelectorAll('.lightbox');
     for(var i = 0; i < lightbox.length; i++) {
       lightbox[i].parentNode.removeChild(lightbox[i]);
@@ -104,6 +103,8 @@ var Lightbox = (function () {
     for(var i = 0; i < overlay.length; i++) {
       overlay[i].parentNode.removeChild(overlay[i]);
     }
+
+    e.returnValue = false;
   };
 
 
