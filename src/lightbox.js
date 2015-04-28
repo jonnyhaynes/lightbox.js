@@ -68,8 +68,8 @@ var Lightbox = (function () {
         overlay.className += ' ' + 'overlay';
 
       // append both to the body
-      document.body.appendChild(el);
       document.body.appendChild(overlay);
+      document.body.appendChild(el);
 
       // add a click event for the close icon
       var closeLinks = document.querySelectorAll(config.closeLinkSelector);
