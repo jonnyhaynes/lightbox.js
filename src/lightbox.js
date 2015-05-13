@@ -85,7 +85,7 @@ var Lightbox = (function () {
 
     });
 
-    e.returnValue = false;
+    returnValue(e);
   };
 
 
@@ -104,7 +104,26 @@ var Lightbox = (function () {
       overlay[i].parentNode.removeChild(overlay[i]);
     }
 
-    e.returnValue = false;
+    returnValue(e);
+  };
+
+  /**
+   * fix for return value issue
+   */
+
+  var returnValue = function (event) {
+    if (!event)
+       event = window.event;
+    //IE9 & Other Browsers
+    if (event.returnValue) {
+      event.returnValue = false;
+    } else if (event.stopPropagation) {
+      event.stopPropagation();
+    }
+    //IE8 and Lower
+    else {
+      event.cancelBubble = true;
+    }
   };
 
 
