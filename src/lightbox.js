@@ -53,19 +53,21 @@ var Lightbox = (function () {
 
       // create the lightbox
       var el = document.createElement('div');
-      if (el.classList)
+      if (el.classList) {
         el.classList.add('lightbox');
-      else
+      } else {
         el.className += ' ' + 'lightbox';
+      }
 
       el.innerHTML += response;
 
       // create the overlay
       var overlay = document.createElement('div');
-      if (overlay.classList)
+      if (overlay.classList) {
         overlay.classList.add('overlay');
-      else
+      } else {
         overlay.className += ' ' + 'overlay';
+      }
 
       // append both to the body
       document.body.appendChild(overlay);
@@ -112,8 +114,9 @@ var Lightbox = (function () {
    */
 
   var returnValue = function (event) {
-    if (!event)
-       event = window.event;
+    if (!event) {
+      event = window.event;
+    }
     //IE9 & Other Browsers
     if (event.returnValue) {
       event.returnValue = false;
